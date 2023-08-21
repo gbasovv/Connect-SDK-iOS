@@ -84,18 +84,18 @@ Pod::Spec.new do |s|
                                PREFIX
 
   non_arc_files =
-    "Main/Frameworks/asi-http-request/External/Reachability/*.{h,m}",
-    "Main/Frameworks/asi-http-request/Classes/*.{h,m}"
+    "core/Frameworks/asi-http-request/External/Reachability/*.{h,m}",
+    "core/Frameworks/asi-http-request/Classes/*.{h,m}"
 
   s.subspec 'Core' do |sp|
-    sp.source_files  = "ConnectSDKDefaultPlatforms.h", "Main/**/*.{h,m}"
-    sp.exclude_files = (non_arc_files.dup << "Main/ConnectSDK*Tests/**/*" << "Main/Frameworks/LGCast/**/*.h")
-    sp.private_header_files = "Main/**/*_Private.h"
+    sp.source_files  = "ConnectSDKDefaultPlatforms.h", "core/**/*.{h,m}"
+    sp.exclude_files = (non_arc_files.dup << "core/ConnectSDK*Tests/**/*" << "core/Frameworks/LGCast/**/*.h")
+    sp.private_header_files = "core/**/*_Private.h"
     sp.requires_arc = true
 
     sp.dependency 'ConnectSDK/no-arc'
-    sp.ios.vendored_frameworks = 'Main/Frameworks/LGCast/LGCast.xcframework', 'Main/Frameworks/LGCast/GStreamerForLGCast.xcframework'
-    sp.preserve_paths =  'Main/Frameworks/LGCast/LGCast.xcframework', 'Main/Frameworks/LGCast/GStreamerForLGCast.xcframework'
+    sp.ios.vendored_frameworks = 'core/Frameworks/LGCast/LGCast.xcframework', 'core/Frameworks/LGCast/GStreamerForLGCast.xcframework'
+    sp.preserve_paths =  'core/Frameworks/LGCast/LGCast.xcframework', 'core/Frameworks/LGCast/GStreamerForLGCast.xcframework'
   end
 
   s.subspec 'no-arc' do |sp|
