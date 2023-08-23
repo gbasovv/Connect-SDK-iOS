@@ -56,6 +56,7 @@
 - (void) backWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
 - (void) homeWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
 - (void) redWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
+- (void) enterWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
 - (void) yellowWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
 - (void) greenWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
 - (void) blueWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;

@@ -46,7 +46,8 @@ typedef enum {
     WebOSTVMouseButtonGuide = 1021,
     WebOSTVMouseButtonDash = 1022,
     WebOSTVMouseButtonMenu = 1023,
-    WebOSTVMouseButtonExit = 1024
+    WebOSTVMouseButtonExit = 1024,
+    WebOSTVMouseButtonEnter = 1025
     
 } WebOSTVMouseButton;
 

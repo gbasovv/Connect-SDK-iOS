@@ -472,6 +472,28 @@
     return CapabilityPriorityLevelHigh;
 }
 
+- (void)getListLaunchPointsWithSuccess:(AppListSuccessBlock)success failure:(FailureBlock)failure
+{
+    NSURL *URL = [NSURL URLWithString:@"ssap://com.webos.applicationManager/listLaunchPoints"];
+
+    ServiceCommand *command = [[ServiceCommand alloc] initWithDelegate:self.socket target:URL payload:nil];
+    command.callbackComplete = ^(NSDictionary *responseDic)
+    {
+        NSArray *foundApps = [responseDic objectForKey:@"launchPoints"];
+        NSMutableArray *appList = [[NSMutableArray alloc] init];
+
+        [foundApps enumerateObjectsUsingBlock:^(NSDictionary *appInfo, NSUInteger idx, BOOL *stop)
+        {
+            [appList addObject:[WebOSTVService appInfoFromDictionary:appInfo]];
+        }];
+
+        if (success)
+            success(appList);
+    };
+    command.callbackError = failure;
+    [command send];
+}
+
 - (void)getAppListWithSuccess:(AppListSuccessBlock)success failure:(FailureBlock)failure
 {
     NSURL *URL = [NSURL URLWithString:@"ssap://com.webos.applicationManager/listApps"];
@@ -1536,6 +1558,11 @@
     [self sendMouseButton:WebOSTVMouseButtonRed success:success failure:failure];
 }
 
+- (void)enterWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure
+{
+    [self sendMouseButton:WebOSTVMouseButtonEnter success:success failure:failure];
+}
+
 - (void)greenWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure
 {
     [self sendMouseButton:WebOSTVMouseButtonGreen success:success failure:failure];
@@ -2078,7 +2105,7 @@
                                                  success(status);
                                              }
                                              
-                                         } failure:failure];
+                                         } failure:failure];    
     return subscription;
 }
 

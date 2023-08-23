@@ -143,6 +143,7 @@
         case WebOSTVMouseButtonDash: keyString = @"DASH"; break;
         case WebOSTVMouseButtonMenu: keyString = @"MENU"; break;
         case WebOSTVMouseButtonExit: keyString = @"EXIT"; break;
+        case WebOSTVMouseButtonEnter: keyString = @"ENTER"; break;
             
         default:break;
     }
