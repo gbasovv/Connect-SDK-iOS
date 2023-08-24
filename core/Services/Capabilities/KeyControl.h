@@ -79,6 +79,13 @@
 - (void) volumeDownWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
 - (void) volumeUpWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
 - (void) muteWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
+- (void) playWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
+- (void) pauseWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
+- (void) stopWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
+- (void) fastForwardWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
+- (void) rewindWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
+- (void) getMediaMetaDataWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
+- (void) getPlayStateWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
 
 - (void) sendKeyCode:(NSUInteger)keyCode success:(SuccessBlock)success failure:(FailureBlock)failure;
 
