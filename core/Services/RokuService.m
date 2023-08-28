@@ -734,6 +734,21 @@ static NSMutableArray *registeredApps = nil;
     [self sendKeyCode:RokuKeyCodeVolumeUp success:success failure:failure];
 }
 
+- (void) infoWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure
+{
+    [self sendKeyCode:RokuKeyCodeInfo success:success failure:failure];
+}
+
+- (void) enterWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure
+{
+    [self sendKeyCode:RokuKeyCodeEnter success:success failure:failure];
+}
+
+- (void) searchWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure
+{
+    [self sendKeyCode:RokuKeyCodeSearch success:success failure:failure];
+}
+
 - (void)muteWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure
 {
     [self sendKeyCode:RokuKeyCodeMute success:success failure:failure];
