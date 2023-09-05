@@ -77,6 +77,7 @@
 - (void) menuWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
 - (void) exitWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
 - (void) powerOffWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
+- (void) powerWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
 - (void) instantReplayWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
 - (void) volumeDownWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
 - (void) volumeUpWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure;

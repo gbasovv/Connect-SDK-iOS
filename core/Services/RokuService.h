@@ -47,14 +47,14 @@ enum
     RokuKeyCodeVolumeDown,
     RokuKeyCodeVolumeUp,
     RokuKeyCodeMute,
-    RokuKeyCodePowerOff
-
+    RokuKeyCodePowerOff,
+    RokuKeyCodePower
 };
 
 // @cond INTERNAL
 typedef NSUInteger RokuKeyCode;
 
-#define kRokuKeyCodes @[ @"Home", @"Rev", @"Fwd", @"Play", @"Select", @"Left", @"Right", @"Down", @"Up", @"Back", @"InstantReplay", @"Info", @"Backspace", @"Search", @"Enter", @"Lit_", @"VolumeDown", @"VolumeUp", @"VolumeMute", @"PowerOff" ]
+#define kRokuKeyCodes @[ @"Home", @"Rev", @"Fwd", @"Play", @"Select", @"Left", @"Right", @"Down", @"Up", @"Back", @"InstantReplay", @"Info", @"Backspace", @"Search", @"Enter", @"Lit_", @"VolumeDown", @"VolumeUp", @"VolumeMute", @"PowerOff", @"Power"]
 // @endcond
 
 @interface RokuService : DeviceService <Launcher, MediaPlayer, MediaControl, KeyControl, TextInputControl>
