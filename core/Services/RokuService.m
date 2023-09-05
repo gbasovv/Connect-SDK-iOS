@@ -724,6 +724,11 @@ static NSMutableArray *registeredApps = nil;
     [self sendKeyCode:RokuKeyCodePowerOff success:success failure:failure];
 }
 
+- (void)instantReplayWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure
+{
+    [self sendKeyCode:RokuKeyCodeInstantReplay success:success failure:failure];
+}
+
 - (void)volumeDownWithSuccess:(SuccessBlock)success failure:(FailureBlock)failure
 {
     [self sendKeyCode:RokuKeyCodeVolumeDown success:success failure:failure];
